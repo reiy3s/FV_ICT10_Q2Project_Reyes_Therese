@@ -14,11 +14,13 @@
 
         .topnav {
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            background-color: #81a2ae;
+            background-color:#685572;
             overflow: hidden;
             border-radius: 0%;
             margin: 0%;
             padding: 1%;
+            position: sticky;
+            top: 10px;
         }  
 
         .topnav a {
@@ -41,26 +43,25 @@
         }
 
         body {
-            background-color: #b4dee5;
+            background-color: #d5d0e3;
             font-family: Arial, sans-serif;
             text-align: center;
         }
 
         .container {
             max-width: 600px;
-            margin: 145px auto;
+            margin: 100px auto;
             padding: 20px;
             background-color: #ffffff;
             border-radius: 8px;
-            border: 5px solid rgb(139, 180, 176);
+            border: 5px solid  #8f7d99;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .result {
-            margin-top: 20px;
             padding: 15px;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
+            background-color:  #d5d0e3;
+            border: 1px solid #51405b;
             border-radius: 4px;
             text-align: left;
         }
@@ -80,7 +81,7 @@
         button {
             margin-top: 10px;
             padding: 10px 20px;
-            background-color: rgb(139, 180, 176);
+            background-color: #51405b;
             color: white;
             border: none;
             border-radius: 4px;
@@ -92,6 +93,7 @@
 <body>
 
     <div class="topnav">
+        <a href="meetthecreator.html"> Meet the Creator </a>
         <a href="index.html">Home</a>
     </div>
 
@@ -105,7 +107,7 @@
 
         <button py-click="search_element"> Search Element </button>
 
-        <br>
+        <br><br>
 
         <div class="result" id="result">
 
@@ -122,7 +124,7 @@
         </div>
 
         <!-- Connect to pyscript-->
-        <script type="py" src="main.py"></script>
+        <script type="py" src="skillstest.py"></script>
 
     </div>
 

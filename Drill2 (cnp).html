@@ -13,12 +13,15 @@
 
         .topnav {
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            background-color: #81a2ae;
+            background-color:#685572;
             overflow: hidden;
             border-radius: 0%;
             margin: 0%;
             padding: 1%;
-            width: 99%;
+            width: 100%;
+            box-sizing: border-box;
+            position: sticky;
+            top: 10px;
         }  
 
         .topnav a {
@@ -38,24 +41,26 @@
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             text-align: center;
             margin-top: 5%;
+            width: 100%;
         }
 
-        #form-div{
+        .panels {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: stretch;
+            gap: 20px;
+            width: min(100%, 1040px);
+            margin: 0 auto;
+        }
+
+        #form-div,
+        #output-div {
             text-align: center;
             color: rgb(239, 232, 250);
             background-color: #51405b;
-            width: min(90vw, 500px);
-            border-radius: 10px;
-            border: 3px solid #170b1d;
-            box-sizing: border-box;
-            padding: 20px;
-        }
-
-        #output-div{
-            text-align: center;
-            color: rgb(239, 232, 250);
-            background-color: #51405b;
-            width: min(90vw, 500px);
+            flex: 1 1 400px;
+            max-width: 500px;
             border-radius: 10px;
             border: 3px solid #170b1d;
             box-sizing: border-box;
@@ -69,11 +74,11 @@
 
         body{
             min-height: 95vh;
-            margin: 0;
+            margin: 8px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            background-color: #dcd2f7;
+            background-color: #d5d0e3;
             font-family: Arial, Helvetica, sans-serif;
             text-align: center;
         }
@@ -96,6 +101,7 @@
 <body>
 
     <div class="topnav">
+        <a href="meetthecreator.html"> Meet the Creator </a>
         <a href="index.html">Home</a>
     </div>
 
@@ -103,6 +109,7 @@
         <h1> ♬ La Creekalena Club ♬ </h1>
         <h3> ♬ Add Club Member ♬ </h3>
 
+        <div class="panels">
             <div id="form-div">
                 <form>
                     <h3> ♬ Join !! ♬ </h3>
@@ -119,17 +126,14 @@
                     <button type="button" py-click="add_member">Add Member</button>
                 </form>
             </div>
-
+            <div id="output-div">
+                <h3> ♬ Club Members ♬ </h3>
+                <ul id="members-list"></ul>
+            </div>
+        </div>
     </div>
 
-    <br><br>
-
-    <div id="output-div">
-        <h3> ♬ Club Members ♬ </h3>
-        <ul id="members-list"></ul>
-    </div>
-
-    <script type="py" src="main.py"></script>
+    <script type="py" src="drill.py"></script>
   
 </body>
 </html>

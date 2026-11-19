@@ -14,15 +14,16 @@
 
     .topnav {
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            background-color: #81a2ae;
+            background-color:#685572;
             overflow: hidden;
             border-radius: 0%;
             margin: 0%;
             padding: 1%;
-            width: 99%;
+            position: sticky;
+            top: 10px;
         }  
 
-    .topnav a {
+        .topnav a {
             float: right;
             display: block;
             color: #e9ecf1;
@@ -31,48 +32,69 @@
             text-decoration: none;
         }
 
-    .topnav a:hover {
+        .topnav a:hover {
             background-color: #7f6b8b;
         }
 
-    .content {
+        .content {
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             text-align: center;
             margin-top: 5%;
         }
 
-    #form-div{
-        text-align: center;
-        color: rgb(239, 232, 250);
-        background-color: #51405b;
-        width: 50%;
-        margin: auto;
-        border-radius: 10px;
-        border: 5px solid #170b1d;
-    }
+        body {
+            background-color: #d5d0e3;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
 
-    body{
-        min-height: 100vh;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: #dcd2f7;
-        font-family: Arial, sans-serif;
-        text-align: center;
-    }
+        .container {
+            max-width: 600px;
+            margin: 140px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            border: 5px solid  #8f7d99;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-    input[type="text"]{
-        size: 50px;
-        width: 50%;
-    }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color:  #51405b;
+            border: 1px solid  #51405b;
+            border-radius: 4px;
+            text-align: left;
+        }
+
+        .element-info p {
+            margin: 5px 0;
+        }
+
+        input[type="text"]{
+            width: min(100%, 500px);
+            height: 30px;
+            display: block;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color:  #51405b;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
 
 </style>
 
 <body>
 
     <div class="topnav">
+        <a href="meetthecreator.html"> Meet the Creator </a>
         <a href="index.html">Home</a>
     </div>
 
@@ -103,7 +125,7 @@
         <p id="output"></p>
     </div>
 
-    <script type="py" src="main.py"></script>
+    <script type="py" src="sw1.py"></script>
     
 </body>
 </html>
