@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q2 Seatwork 1 </title>
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.3.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2025.3.1/core.js"></script>
+
+</head>
+
+<style>
+
+    #form-div{
+        text-align: center;
+        color: rgb(239, 232, 250);
+        background-color: #51405b;
+        width: 50%;
+        margin: auto;
+        border-radius: 10px;
+        border: 5px solid #170b1d;
+    }
+
+    body{
+        min-height: 100vh;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #dcd2f7;
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+
+    input[type="text"]{
+        size: 50px;
+        width: 50%;
+    }
+
+</style>
+
+<body>
+
+
+    <div class="container text-center" id="form-div">
+
+        <h1> Rainbow Catering Club </h1>
+        <h3> Candidate Verification System </h3>
+
+        <form>
+
+            <div>
+                    <input type="text" name="fn" id="fn" placeholder="Enter your first name here..." class="form-control">
+
+                <br><br>
+
+                    <input type="text" name="ln" id="ln" placeholder="Enter your last name here..." class="form-control">
+
+                <br>
+
+            <i><div id="display"></div></i><br>
+
+            <button type="button" py-click="get_IN">Verify</button>
+
+        <br></form>
+    </div>
+
+    <div>
+        <p id="output"></p>
+    </div>
+
+    <script type="py" src="main.py"></script>
+    
+</body>
+</html>
